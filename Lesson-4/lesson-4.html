@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+            *{
+                font-family: "Inter", serif;
+            }
+
+            .left-content{
+               width: 600px;
+            }
+            .left-content h1{
+                font-size: 60px;
+            }
+
+            .header{
+                padding: 40px 80px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .nav{
+                display: flex;
+                gap: 48px;
+            }
+            .header-action{
+                display: flex;
+                gap: 10px;
+                align-items: center;
+            }
+
+            .search-bar{
+                width: 300px;
+                border: 1px solid grey;
+                border-radius: 8px;
+                padding: 1em;
+            }
+
+            .main-content{
+                padding: 80px;
+            }
+
+            .total-student{
+                border-left: 2px solid #A4074D;
+                padding-left: 40px;
+            }
+            .avatar {
+                position: relative;
+                border-radius: 50%;
+                border: 1px solid white;
+            }
+            #avatar2{
+                left: -30px;
+            }
+            #avatar3 {
+                left: -60px;
+            }
+            #avatar4 {
+                left: -90px;
+            }
+          
+
+            .start-learning{
+                border-radius: 18px;
+                background-color: #A4074D;
+                color: white;
+                font-weight: bold;
+                padding: 24px 80px;
+            }
+            .learn-more{
+                border: 1px solid #A4074D;
+                border-radius: 18px;    
+                font-weight: bold;
+                padding: 24px 80px;
+                background-color: white;
+                color:#1A2434;
+                ;
+            }
+            .br1, .br2, .br3, .br4{
+                padding: 10px 15px;
+            }
+            .brand{
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <header class="header">
+            <div class="logo">
+                <img src="./Logo.png" alt="logo">
+            </div>
+
+            <div class="nav">
+                <p>About us</p>
+                <p>Our Class</p>
+                <p>Blog</p>
+                <p>Contact</p>
+            </div>
+
+            <div class="header-action">
+                <div class="shopping-bag">
+                    <img src="./ShoppingBag.png"></div>
+
+            <div class="search-bar-container">
+                <input class="search-bar" type="text" placeholder="Search">
+
+            </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="left-content">
+                <h1>Master Digital Skills with Ease!</h1>
+                <p>Unlock Digital Mastery Effortlessly! Explore and enhance your skills with our user-friendly platform.</p>
+                <div class="total-student">
+                    <h3>Total Students</h3>
+                    <div>
+                        <img src="./Doraemon.jpg" width="50px" height="50px" class="avatar" id="avatar1">
+                        <img src="./Doraemon.jpg" width="50px" height="50px" class="avatar" id="avatar2">
+                        <img src="./Doraemon.jpg" width="50px" height="50px" class="avatar" id="avatar3">
+                        <img src="./Doraemon.jpg" width="50px" height="50px" class="avatar" id="avatar4">
+                    </div>
+                </div>
+                <div class="button">
+                    <button class="start-learning">Start Learning</button>
+                    <button class="learn-more">Learn more</button>
+                </div>
+                <div class="company">
+                    <h3>trusted By</h3>
+                    <div class="brand">
+                        <img src="./Google Logotype.png" class="br1">
+                        <img src="./Canva Logotype.png" class="br2">
+                        <img src="./Amazon.png" class="br3">
+                        <img src="./Sketch Logotype.png" class="br4">
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
