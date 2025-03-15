@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Quản lý Nghệ Sĩ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-gray-100">
+    <!-- Header -->
+    <header class="bg-purple-800 text-white py-4 px-6 flex justify-between items-center">
+        <h1 class="text-2xl font-bold">Quản lý Nghệ Sĩ</h1>
+        <button class="bg-pink-500 hover:bg-pink-600 px-4 py-2 rounded-lg text-white font-semibold">
+            Logout
+        </button>
+    </header>
+
+    <!-- Main Content -->
+    <div class="p-6">
+        <div class="bg-white rounded-lg shadow-lg p-4">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-xl font-bold text-gray-800">Danh sách nghệ sĩ</h2>
+                <button id="addArtistBtn" class="bg-green-500 hover:bg-green-600 px-4 py-2 text-white rounded-lg">
+                    Thêm Nghệ Sĩ
+                </button>
+            </div>
+
+            <!-- Artists Table -->
+            <table class="w-full text-left border-collapse">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="p-2 border">ID</th>
+                        <th class="p-2 border">Tên Nghệ Sĩ</th>
+                        <th class="p-2 border">Tiểu Sử</th>
+                        <th class="p-2 border">Số Bài Hát</th>
+                        <th class="p-2 border">Hành Động</th>
+                    </tr>
+                </thead>
+                <tbody id="artistTable" class="text-gray-700">
+                    <!-- Nghệ sĩ sẽ được render tại đây -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Modal Add/Edit Artist -->
+    <div id="artistModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+        <div class="bg-white p-6 rounded-lg shadow-lg w-96">
+            <h3 id="modalTitle" class="text-xl font-bold mb-4">Thêm Nghệ Sĩ</h3>
+            <form id="artistForm">
+                <div class="mb-4">
+                    <label for="artistName" class="block text-gray-700 font-semibold">Tên Nghệ Sĩ</label>
+                    <input type="text" id="artistName" class="w-full px-4 py-2 border rounded-lg" required>
+                </div>
+                <div class="mb-4">
+                    <label for="artistBio" class="block text-gray-700 font-semibold">Tiểu Sử</label>
+                    <textarea id="artistBio" class="w-full px-4 py-2 border rounded-lg" required></textarea>
+                </div>
+                <div class="flex justify-end">
+                    <button type="button" id="cancelBtn" class="mr-4 bg-gray-500 hover:bg-gray-600 px-4 py-2 text-white rounded-lg">
+                        Hủy
+                    </button>
+                    <button type="submit" class="bg-blue-500 hover:bg-blue-600 px-4 py-2 text-white rounded-lg">
+                        Lưu
+                    </button>
+                    <div class="mb-4">
+                        <label for="artistSongs" class="block text-gray-700 font-semibold">Số Bài Hát</label>
+                        <input type="number" id="artistSongs" class="w-full px-4 py-2 border rounded-lg" required>
+                    </div>
+                    
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="./admin-artists.js"></script>
+</body>
+</html>
